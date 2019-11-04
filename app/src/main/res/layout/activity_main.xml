@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.main.MainActivity">
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.example.pusherbot.activities.main.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAF3F3"
+        android:orientation="vertical" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_messages_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+            <EditText
+                android:id="@+id/chat_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Send message..."
+                android:paddingStart="16dp"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/chat_send_button"
+                android:background="@android:color/transparent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_send_black"
+                android:tint="@color/colorPrimary"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
